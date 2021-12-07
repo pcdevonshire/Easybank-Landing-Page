@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --darkBlue: hsl(233, 26%, 24%);
+    --lime: hsl(136, 65%, 51%);
+    --cyan: hsl(192, 70%, 51%);
+    --gray: hsl(233, 8%, 62%);
+    --lightGray: hsl(220, 16%, 96%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    --Public: 'Public Sans', sans-serif;
+}
+
+::selection {
+    color: var(--white);
+    background-color: var(--lime);
+}
+
+body {
+    font-family: var(--Inter);
+    min-height: 100vh;
+    min-width: 375px;
+    max-width: 1980px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    font-family: var(--Public);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 2.5em;
+}
+
+.mobile-menu {
+    display: none; /* < Hamburger menu toggle */
+    flex-direction: column;
+    position: absolute;
+    top: 6em;
+    left: 2em;
+    right: 2em;
+    height: 325px;
+    background-color: var(--white);
+    text-align: center;
+    padding: 3em 2em;
+    z-index: 5;
+    border-radius: 15px;
+    margin: 0 auto;
+    transition: all 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    min-width: 311px;
+}
+
+.mobile-menu li {
+    margin-bottom: 2em;
+}
+
+.invite {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    
+    .mobile-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.75em;
+        position: static;
+        top: initial;
+        left: initial;
+        right: initial;
+        height: initial;
+        background-color: transparent;
+        text-align: left;
+        padding: 0;
+        border-radius: 0;
+        margin: 0;
+        box-shadow: none;
+    }
+    
+    .mobile-menu li {
+        margin-bottom: 0;
+    }
+
+    .hero .nav a {
+        font-size: 1.3rem;
+    }
+
+    #burger {
+        display: none;
+    }
+
+}
